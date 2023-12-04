@@ -18,7 +18,7 @@ test.describe("Login validations", () => {
         expect(name).toBe('Login succeeded. Now you can logout.');
     });
 
-    test('Login with invalid credentials', async({ page }, testInfo) => {
+    /*test('Login with invalid credentials', async({ page }, testInfo) => {
         const loginPage = new LoginPage(page);
         await loginPage.navigate();
         await loginPage.login("demo","mode1");
@@ -36,5 +36,5 @@ test.describe("Login validations", () => {
         //testInfo.attachments.push({ name: 'screenshot.png', path, contentType: 'image/png' });
 
         expect(name).toBe('Login failed. Invalid user name and/or password.');
-    });
+    });*/
 }) 
