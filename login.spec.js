@@ -10,31 +10,31 @@ test.describe("Login validations", () => {
         const name = await loginPage.getInnerText();
 
         //Adding Xray properties
-        testInfo.annotations.push({ type: 'test_key', description: 'EWB-716' });
+        //testInfo.annotations.push({ type: 'test_key', description: 'EWB-716' });
         //testInfo.annotations.push({ type: 'test_summary', description: 'Successful login.' });
-        testInfo.annotations.push({ type: 'requirements', description: 'EWB-270' });
+        //testInfo.annotations.push({ type: 'requirements', description: 'EWB-270' });
         //testInfo.annotations.push({ type: 'test_description', description: 'Validate that the login is successful.' });
 
         expect(name).toBe('Login succeeded. Now you can logout.');
     });
 
-    /*test('Login with invalid credentials', async({ page }, testInfo) => {
+    test('Login with invalid credentials', async({ page }, testInfo) => {
         const loginPage = new LoginPage(page);
         await loginPage.navigate();
         await loginPage.login("demo","mode1");
         const name = await loginPage.getInnerText();
 
         //Adding Xray properties
-        testInfo.annotations.push({ type: 'test_key', description: 'EWB-719' });
+        //testInfo.annotations.push({ type: 'test_key', description: 'EWB-719' });
         //testInfo.annotations.push({ type: 'test_summary', description: 'Unsuccessful login.' });
-        testInfo.annotations.push({ type: 'requirements', description: 'EWB-270' });
+        //testInfo.annotations.push({ type: 'requirements', description: 'EWB-270' });
         //testInfo.annotations.push({ type: 'test_description', description: 'Validate that the login is unsuccessful.' });
 
         // Capture a screenshot and attach it.
-        //const path = testInfo.outputPath('tmp_screenshot.png');
-        //await page.screenshot({ path });
-        //testInfo.attachments.push({ name: 'screenshot.png', path, contentType: 'image/png' });
+        const path = testInfo.outputPath('tmp_screenshot.png');
+        await page.screenshot({ path });
+        testInfo.attachments.push({ name: 'screenshot.png', path, contentType: 'image/png' });
 
         expect(name).toBe('Login failed. Invalid user name and/or password.');
-    });*/
+    });
 }) 
