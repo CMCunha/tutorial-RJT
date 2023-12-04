@@ -31,9 +31,9 @@ test.describe("Login validations", () => {
         //testInfo.annotations.push({ type: 'test_description', description: 'Validate that the login is unsuccessful.' });
 
         // Capture a screenshot and attach it.
-        const path = testInfo.outputPath('tmp_screenshot.png');
-        await page.screenshot({ path });
-        testInfo.attachments.push({ name: 'screenshot.png', path, contentType: 'image/png' });
+        //const path = testInfo.outputPath('tmp_screenshot.png');
+        //await page.screenshot({ path });
+        //testInfo.attachments.push({ name: 'screenshot.png', path, contentType: 'image/png' });
 
         expect(name).toBe('Login failed. Invalid user name and/or password.');
     });
