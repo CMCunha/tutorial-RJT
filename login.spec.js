@@ -11,9 +11,9 @@ test.describe("Login validations", () => {
 
         //Adding Xray properties
         testInfo.annotations.push({ type: 'test_key', description: 'EWB-716' });
-        testInfo.annotations.push({ type: 'test_summary', description: 'Successful login.' });
+        //testInfo.annotations.push({ type: 'test_summary', description: 'Successful login.' });
         testInfo.annotations.push({ type: 'requirements', description: 'EWB-270' });
-        testInfo.annotations.push({ type: 'test_description', description: 'Validate that the login is successful.' });
+        //testInfo.annotations.push({ type: 'test_description', description: 'Validate that the login is successful.' });
 
         expect(name).toBe('Login succeeded. Now you can logout.');
     });
@@ -26,9 +26,9 @@ test.describe("Login validations", () => {
 
         //Adding Xray properties
         testInfo.annotations.push({ type: 'test_key', description: 'EWB-719' });
-        testInfo.annotations.push({ type: 'test_summary', description: 'Unsuccessful login.' });
+        //testInfo.annotations.push({ type: 'test_summary', description: 'Unsuccessful login.' });
         testInfo.annotations.push({ type: 'requirements', description: 'EWB-270' });
-        testInfo.annotations.push({ type: 'test_description', description: 'Validate that the login is unsuccessful.' });
+        //testInfo.annotations.push({ type: 'test_description', description: 'Validate that the login is unsuccessful.' });
 
         // Capture a screenshot and attach it.
         const path = testInfo.outputPath('tmp_screenshot.png');
