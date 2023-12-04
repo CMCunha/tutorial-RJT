@@ -54,7 +54,7 @@ jobs:
          username: "${{ secrets.XRAYCLOUD_CLIENT_ID }}"
          password: "${{ secrets.XRAYCLOUD_CLIENT_SECRET }}"
          xrayCloud: "true"
-         testPaths: "**/xray-report.xml"
+         testPaths: "xray-report.xml"
          testExecKey: "${{ inputs.testExecKey }}"
          projectKey: "${{ inputs.projectKey }}"
          testEnvironments: "NODE_${{ matrix.node-version }}"
