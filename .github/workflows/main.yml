@@ -49,12 +49,12 @@ jobs:
       run: |
         cat xray-report.xml
     - name: "Import results to Xray"
-      uses: mikepenz/xray-action@v3.0.1
+      uses: mikepenz/xray-action@v3.0.0
       with:
          username: "${{ secrets.XRAYCLOUD_CLIENT_ID }}"
          password: "${{ secrets.XRAYCLOUD_CLIENT_SECRET }}"
          xrayCloud: "true"
-         testPaths: "xray-report.xml"
+         testPaths: "**/xray-report.xml"
          testExecKey: "${{ inputs.testExecKey }}"
          projectKey: "${{ inputs.projectKey }}"
          testEnvironments: "NODE_${{ matrix.node-version }}"
