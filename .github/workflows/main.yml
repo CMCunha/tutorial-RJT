@@ -58,3 +58,7 @@ jobs:
          testExecKey: "${{ inputs.testExecKey }}"
          projectKey: "${{ inputs.projectKey }}"
          testEnvironments: "NODE_${{ matrix.node-version }}"
+    - name: "Import using command line"
+      run: |
+        token=$(curl -H "Content-Type: application/json" -X POST --data @"cloud_auth.json.sample" https://xray.cloud.getxray.app/api/v2/authenticate| tr -d '"')
+        curl -H "Content-Type: application/xml" -X POST -H "Authorization: Bearer $token"  --data @"xray-report.xml" "https://xray.cloud.getxray.app/api/v2/import/execution/junit?projectKey=${{ inputs.projectKey }}&testExecKey=${{ inputs.testExecKey }}"
