@@ -49,7 +49,7 @@ jobs:
       run: |
         cat xray-report.xml
     - name: "Import results to Xray"
-      uses: mikepenz/xray-action@v3.0.0
+      uses: mikepenz/xray-action@v2.4.6
       with:
          username: "${{ secrets.XRAYCLOUD_CLIENT_ID }}"
          password: "${{ secrets.XRAYCLOUD_CLIENT_SECRET }}"
