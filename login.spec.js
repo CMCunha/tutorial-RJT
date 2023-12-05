@@ -10,7 +10,7 @@ test.describe("Login validations", () => {
         const name = await loginPage.getInnerText();
 
         //Adding Xray properties
-        testInfo.annotations.push({ type: 'test_key', description: 'EWB-636' });
+        testInfo.annotations.push({ type: 'test_key', description: 'EWB-716' });
         testInfo.annotations.push({ type: 'test_summary', description: 'Successful login.' });
         testInfo.annotations.push({ type: 'requirements', description: 'EWB-440' });
         testInfo.annotations.push({ type: 'test_description', description: 'Validate that the login is successful.' });
@@ -25,7 +25,7 @@ test.describe("Login validations", () => {
         const name = await loginPage.getInnerText();
 
         //Adding Xray properties
-        testInfo.annotations.push({ type: 'test_key', description: 'EWB-637' });
+        testInfo.annotations.push({ type: 'test_key', description: 'EWB-719' });
         testInfo.annotations.push({ type: 'test_summary', description: 'Unsuccessful login.' });
         testInfo.annotations.push({ type: 'requirements', description: 'EWB-440' });
         testInfo.annotations.push({ type: 'test_description', description: 'Validate that the login is unsuccessful.' });
