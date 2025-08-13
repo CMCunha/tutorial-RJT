@@ -3,7 +3,7 @@ pipeline {
     string(name: 'projectKey', defaultValue: '')
     string(name: 'testPlanKey', defaultValue: '')
   }
-  agent any 
+  agent { docker { image 'mcr.microsoft.com/playwright:v1.54.0-noble' } }
   stages {
     stage('install playwright') {
       steps {
